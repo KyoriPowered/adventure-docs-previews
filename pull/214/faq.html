@@ -1,0 +1,467 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="FAQ" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyoripowered.github.io/adventure-docs-previews/pull/214/faq.html" />
+<meta property="og:site_name" content="Adventure" />
+<meta property="og:description" content="We find that there are some issues users come across relatively frequently while applying the Adventure library in certain contexts. These may not be directly related to Adventure itself, but these..." />
+<meta property="og:image" content="https://kyoripowered.github.io/adventure-docs-previews/pull/214/_static/logo-notext.png" />
+<meta property="og:image:alt" content="Adventure" />
+<meta name="description" content="We find that there are some issues users come across relatively frequently while applying the Adventure library in certain contexts. These may not be directly related to Adventure itself, but these..." />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Audiences" href="audiences.html" /><link rel="prev" title="Community Libraries" href="community-libraries.html" />
+        <link rel="canonical" href="https://kyoripowered.github.io/adventure-docs-previews/pull/214/faq.html" />
+
+    <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>FAQ - Adventure Documentation (v4.22.0)</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/button/button.css?v=a46f6232" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  --color-brand-primary: #2f2850;
+  --color-brand-content: #6355aa;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #282a36;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #b597d3;
+  --color-brand-content: #7767c9;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #282a36;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #b597d3;
+  --color-brand-content: #7767c9;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Adventure Documentation (v4.22.0)</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+  </div>
+  
+  
+<span class="sidebar-brand-text">Adventure</span>
+
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community-libraries.html">Community Libraries</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audiences.html">Audiences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Text (Chat Components)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="serializer/index.html">Text Serializers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Text Serializers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="serializer/json.html">JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer/gson.html">Gson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer/legacy.html">Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer/plain.html">Plain</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="minimessage/index.html">MiniMessage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of MiniMessage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="minimessage/format.html">Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="minimessage/api.html">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="minimessage/dynamic-replacements.html">Dynamic Replacements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="minimessage/translator.html">MiniMessage Translator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="serializer/ansi.html">ANSI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bossbar.html">Boss Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sound.html">Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="title.html">Titles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="book.html">Books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tablist.html">PlayerList/Tab list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resource-pack.html">Resource Packs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="minimessage/index.html">MiniMessage</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of MiniMessage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="minimessage/format.html">Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minimessage/api.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minimessage/dynamic-replacements.html">Dynamic Replacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minimessage/translator.html">MiniMessage Translator</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="localization.html">Localization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="platform/index.html">Platforms</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Platforms</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="platform/native.html">Native Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/bukkit.html">Bukkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/bungeecord.html">BungeeCord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/spongeapi.html">SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/modded.html">Modded (Fabric and NeoForge shared API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/fabric.html">Fabric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/neoforge.html">NeoForge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/viaversion.html">ViaVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/implementing.html">Implementing Platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="migration/index.html">Migrating to Adventure from other APIs</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Migrating to Adventure from other APIs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="migration/bungeecord-chat-api.html">Migrating from the BungeeCord Chat API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration/text-3.x.html">Migrating from text 3.x</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="version-history/index.html">Version History</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Version History</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="version-history/adventure.html">adventure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version-history/adventure-platform.html">adventure-platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version-history/adventure-platform-fabric.html">adventure-platform-fabric</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="faq">
+<h1>FAQ<a class="headerlink" href="#faq" title="Link to this heading">¶</a></h1>
+<p>We find that there are some issues users come across relatively frequently while applying the Adventure library in certain contexts. These may not be directly related to Adventure itself, but these answers are published here those that ask them:</p>
+<section id="why-is-my-lore-in-italics">
+<h2>Why is my lore in italics?<a class="headerlink" href="#why-is-my-lore-in-italics" title="Link to this heading">¶</a></h2>
+<p>Components will inherit style from their parent. For example, in the following code snippet, each word will be red, despite red not being explicitly set on the appended component: <code class="code highlight h i g l t java docutils literal highlight-java"><span class="n">text</span><span class="p">(</span><span class="s">&quot;hi&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">RED</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">text</span><span class="p">(</span><span class="s">&quot;also red!&quot;</span><span class="p">))</span></code>.</p>
+<p>In vanilla Minecraft, some places where components are rendered have parent styles. For example, lore text has a parent style that makes all text italic. This means that you will need to set italic to false if you do not want any component you are storing in lore to be italic. The <code class="code highlight h i g l t java docutils literal highlight-java"><span class="n">Component</span><span class="p">.</span><span class="na">decorationIfAbsent</span><span class="p">()</span></code> method can apply this to existing components without overriding any formatting specifically set by users.</p>
+</section>
+<section id="messages-not-sending-hex-colors-not-working-events-not-appearing-fonts-messed-up">
+<h2>Messages not sending? Hex colors not working? Events not appearing? Fonts messed up?<a class="headerlink" href="#messages-not-sending-hex-colors-not-working-events-not-appearing-fonts-messed-up" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Test on a vanilla client, without any mods or resource packs. Modded clients (such as Badlion), client mods, and even resource packs can break many elements of the modern JSON chat format and mess with incoming chat packets in ways that cause a myriad of issues.</p></li>
+<li><p>Try without other plugins/mods. If another plugin/mod is modifying outgoing packets or formatting chat messages, this could cause a loss of formatting in the messages you send. Try without any other plugins to see if any are causing issues.</p></li>
+<li><p>For RGB colors, test on a client of at least version <em>1.16</em>. Mojang added RGB support in this version. The JSON message format has evolved over time and has had many new additions since its introduction many, many years ago. For a full version history, see <a class="reference external" href="https://minecraft.wiki/w/Raw_JSON_text_format">the Minecraft wiki</a>.</p></li>
+</ul>
+</section>
+<section id="how-can-i-support-both-minimessage-and-legacy-code-formatting">
+<h2>How can I support both MiniMessage and legacy (§-code) formatting?<a class="headerlink" href="#how-can-i-support-both-minimessage-and-legacy-code-formatting" title="Link to this heading">¶</a></h2>
+<p>If you have legacy in configuration files, or other places, it is suggested that you migrate them once using the legacy deserializer to turn them into a component and then MiniMessage to serialize them into proper MiniMessage format.</p>
+<p>There are no working, recommended, or supported ways of using both MiniMessage and legacy color codes and there never will be. Even simple find-and-replace style techniques do not work and will fail to take into account the quirks of style resetting in legacy formatting.</p>
+</section>
+<section id="how-can-i-use-bukkits-placeholderapi-in-minimessage-messages">
+<h2>How can I use Bukkit’s PlaceholderAPI in MiniMessage messages?<a class="headerlink" href="#how-can-i-use-bukkits-placeholderapi-in-minimessage-messages" title="Link to this heading">¶</a></h2>
+<p>PlaceholderAPI placeholders are not supported in MiniMessage. However, you can easily create a custom tag resolver that can allow users to use PlaceholderAPI placeholders in MiniMessage strings, like in the following example:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Example</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Example method to create a MiniMessage placeholder that parses PlaceholderAPI placeholders for a player.</p>
+<p class="sd-card-text">The tag added is of the format <code class="code highlight h i g l t minimessage docutils literal highlight-minimessage"><span class="nt">&lt;papi:</span><span class="na">[papi_placeholder]</span><span class="nt">&gt;</span></code>. For example, <code class="code highlight h i g l t minimessage docutils literal highlight-minimessage"><span class="nt">&lt;papi:</span><span class="na">luckperms_prefix</span><span class="nt">&gt;</span></code>.</p>
+<p class="sd-card-text">Credit to mbaxter.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">* Creates a tag resolver capable of resolving PlaceholderAPI tags for a given player.</span>
+<span class="cm">*</span>
+<span class="cm">* @param player the player</span>
+<span class="cm">* @return the tag resolver</span>
+<span class="cm">*/</span>
+<span class="kd">public</span><span class="w"> </span><span class="nd">@NotNull</span><span class="w"> </span><span class="n">TagResolver</span><span class="w"> </span><span class="nf">papiTag</span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="nd">@NotNull</span><span class="w"> </span><span class="n">Player</span><span class="w"> </span><span class="n">player</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">TagResolver</span><span class="p">.</span><span class="na">resolver</span><span class="p">(</span><span class="s">&quot;papi&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">argumentQueue</span><span class="p">,</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Get the string placeholder that they want to use.</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">papiPlaceholder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">argumentQueue</span><span class="p">.</span><span class="na">popOr</span><span class="p">(</span><span class="s">&quot;papi tag requires an argument&quot;</span><span class="p">).</span><span class="na">value</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Then get PAPI to parse the placeholder for the given player.</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">parsedPlaceholder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PlaceholderAPI</span><span class="p">.</span><span class="na">setPlaceholders</span><span class="p">(</span><span class="n">player</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;%&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">papiPlaceholder</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;%&#39;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// We need to turn this ugly legacy string into a nice component.</span>
+<span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="n">Component</span><span class="w"> </span><span class="n">componentPlaceholder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LegacyComponentSerializer</span><span class="p">.</span><span class="na">legacySection</span><span class="p">().</span><span class="na">deserialize</span><span class="p">(</span><span class="n">parsedPlaceholder</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Finally, return the tag instance to insert the placeholder!</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Tag</span><span class="p">.</span><span class="na">selfClosingInserting</span><span class="p">(</span><span class="n">componentPlaceholder</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="why-am-i-getting-a-nosuchfielderror-nosuchmethoderror-classnotfoundexception-or-similar-when-updating-using-adventure-platform-adventure-text-minimessage-adventure-api-or-other-related-libraries-tools">
+<h2>Why am I getting a <code class="docutils literal notranslate"><span class="pre">NoSuchFieldError</span></code>, <code class="docutils literal notranslate"><span class="pre">NoSuchMethodError</span></code>, <code class="docutils literal notranslate"><span class="pre">ClassNotFoundException</span></code> or similar when updating/using <code class="docutils literal notranslate"><span class="pre">adventure-platform-*</span></code>, <code class="docutils literal notranslate"><span class="pre">adventure-text-minimessage</span></code>, <code class="docutils literal notranslate"><span class="pre">adventure-api</span></code> or other related libraries/tools?<a class="headerlink" href="#why-am-i-getting-a-nosuchfielderror-nosuchmethoderror-classnotfoundexception-or-similar-when-updating-using-adventure-platform-adventure-text-minimessage-adventure-api-or-other-related-libraries-tools" title="Link to this heading">¶</a></h2>
+<p>In the case of <code class="docutils literal notranslate"><span class="pre">adventure-platform-fabric</span></code>, you need to make sure you are properly <code class="docutils literal notranslate"><span class="pre">include()</span></code>-ing the mod. For legacy platform implementations, you need to make sure you are properly shading and relocating your specific dependencies. Specific issues may include:</p>
+<ul class="simple">
+<li><p>Not shading the correct version of <code class="docutils literal notranslate"><span class="pre">adventure-api</span></code>. You can check your dependency tree to see what or why your build tool is not including the correct version of the API that matches the one used by the platform version you are using.</p></li>
+<li><p>Not relocating your dependencies. If you are running on a platform that includes an older version of the API, or another mod/plugin is also not properly relocating their dependencies, you will use their out-of-date version of the API, causing errors.</p></li>
+<li><p>Building/running against a native implementation of <code class="docutils literal notranslate"><span class="pre">adventure-api</span></code>.  If you are running on a platform that includes an older version of the API, this could cause issues if the library depends on newer features that are not available in the outdated version of the API, your library will not be able to find these methods, causing errors.</p></li>
+<li><p>Relocating <code class="docutils literal notranslate"><span class="pre">adventure-api</span></code> and trying to use native/library methods. If you relocate the API, you will not be able to use any methods that use the API in native implementations or libraries as method signatures will differ. Either shade and relocate this software, or do not use native methods. Alternatively, if you are shading and relocating a library but want to use the API, make sure you are only relocating the packages that you are shading.</p></li>
+</ul>
+<p>Please consult the documentation for your build tool for more information on how to shade, relocate and manage your dependencies. We do not provide one-on-one support for these sorts of issues, as there are far too many project-specific variables that make isolating issues difficult.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="audiences.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Audiences</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="community-libraries.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Community Libraries</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2020-2025 KyoriPowered. Not official Minecraft software. Not approved by or associated with Mojang or Microsoft.
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">FAQ</a><ul>
+<li><a class="reference internal" href="#why-is-my-lore-in-italics">Why is my lore in italics?</a></li>
+<li><a class="reference internal" href="#messages-not-sending-hex-colors-not-working-events-not-appearing-fonts-messed-up">Messages not sending? Hex colors not working? Events not appearing? Fonts messed up?</a></li>
+<li><a class="reference internal" href="#how-can-i-support-both-minimessage-and-legacy-code-formatting">How can I support both MiniMessage and legacy (§-code) formatting?</a></li>
+<li><a class="reference internal" href="#how-can-i-use-bukkits-placeholderapi-in-minimessage-messages">How can I use Bukkit’s PlaceholderAPI in MiniMessage messages?</a></li>
+<li><a class="reference internal" href="#why-am-i-getting-a-nosuchfielderror-nosuchmethoderror-classnotfoundexception-or-similar-when-updating-using-adventure-platform-adventure-text-minimessage-adventure-api-or-other-related-libraries-tools">Why am I getting a <code class="docutils literal notranslate"><span class="pre">NoSuchFieldError</span></code>, <code class="docutils literal notranslate"><span class="pre">NoSuchMethodError</span></code>, <code class="docutils literal notranslate"><span class="pre">ClassNotFoundException</span></code> or similar when updating/using <code class="docutils literal notranslate"><span class="pre">adventure-platform-*</span></code>, <code class="docutils literal notranslate"><span class="pre">adventure-text-minimessage</span></code>, <code class="docutils literal notranslate"><span class="pre">adventure-api</span></code> or other related libraries/tools?</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=de8f7116"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>
