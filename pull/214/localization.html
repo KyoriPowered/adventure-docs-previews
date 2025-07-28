@@ -1,0 +1,518 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Localization" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kyoripowered.github.io/adventure-docs-previews/pull/214/localization.html" />
+<meta property="og:site_name" content="Adventure" />
+<meta property="og:description" content="Adventure provides a way to utilize Minecraft’s built-in localization system for client-side translations as well as an additional Adventure-specific system for translating text. Using Minecraft’s ..." />
+<meta property="og:image" content="https://kyoripowered.github.io/adventure-docs-previews/pull/214/_static/logo-notext.png" />
+<meta property="og:image:alt" content="Adventure" />
+<meta name="description" content="Adventure provides a way to utilize Minecraft’s built-in localization system for client-side translations as well as an additional Adventure-specific system for translating text. Using Minecraft’s ..." />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Platforms" href="platform/index.html" /><link rel="prev" title="Resource Packs" href="resource-pack.html" />
+        <link rel="canonical" href="https://kyoripowered.github.io/adventure-docs-previews/pull/214/localization.html" />
+
+    <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+        <title>Localization - Adventure Documentation (v4.22.0)</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d75fae25" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/button/button.css?v=a46f6232" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f0f0f0;
+  --color-code-foreground: black;
+  --color-brand-primary: #2f2850;
+  --color-brand-content: #6355aa;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #282a36;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #b597d3;
+  --color-brand-content: #7767c9;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #282a36;
+  --color-code-foreground: #f8f8f2;
+  --color-brand-primary: #b597d3;
+  --color-brand-content: #7767c9;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Adventure Documentation (v4.22.0)</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+  </div>
+  
+  
+<span class="sidebar-brand-text">Adventure</span>
+
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community-libraries.html">Community Libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audiences.html">Audiences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Text (Chat Components)</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="serializer/index.html">Text Serializers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Text Serializers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="serializer/json.html">JSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer/gson.html">Gson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer/legacy.html">Legacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serializer/plain.html">Plain</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="minimessage/index.html">MiniMessage</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of MiniMessage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="minimessage/format.html">Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="minimessage/api.html">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="minimessage/dynamic-replacements.html">Dynamic Replacements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="minimessage/translator.html">MiniMessage Translator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="serializer/ansi.html">ANSI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="bossbar.html">Boss Bars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sound.html">Sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="title.html">Titles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="book.html">Books</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tablist.html">PlayerList/Tab list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resource-pack.html">Resource Packs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="minimessage/index.html">MiniMessage</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of MiniMessage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="minimessage/format.html">Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minimessage/api.html">API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minimessage/dynamic-replacements.html">Dynamic Replacements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="minimessage/translator.html">MiniMessage Translator</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Localization</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="platform/index.html">Platforms</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Platforms</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="platform/native.html">Native Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/bukkit.html">Bukkit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/bungeecord.html">BungeeCord</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/spongeapi.html">SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/modded.html">Modded (Fabric and NeoForge shared API)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/fabric.html">Fabric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/neoforge.html">NeoForge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/viaversion.html">ViaVersion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="platform/implementing.html">Implementing Platforms</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="migration/index.html">Migrating to Adventure from other APIs</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Migrating to Adventure from other APIs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="migration/bungeecord-chat-api.html">Migrating from the BungeeCord Chat API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="migration/text-3.x.html">Migrating from text 3.x</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing to the Documentation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="version-history/index.html">Version History</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Version History</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="version-history/adventure.html">adventure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version-history/adventure-platform.html">adventure-platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version-history/adventure-platform-fabric.html">adventure-platform-fabric</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This version of the Adventure documentation has been built as a preview of pull request <a class="reference external" href="https://github.com/KyoriPowered/adventure-docs/issues/214">adventure-docs#214</a>, and has not been reviewed.</p>
+<p>Please consult the pull request to view any discussion and existing reviews.</p>
+</div>
+<section id="localization">
+<span id="id1"></span><h1>Localization<a class="headerlink" href="#localization" title="Link to this heading">¶</a></h1>
+<p>Adventure provides a way to utilize Minecraft’s built-in localization system for client-side translations as well as an additional Adventure-specific system for translating text.</p>
+<section id="using-minecraft-s-localization">
+<h2>Using Minecraft’s localization<a class="headerlink" href="#using-minecraft-s-localization" title="Link to this heading">¶</a></h2>
+<p>To send text to a player that will be translated in the language they have selected in their client settings, use a translatable component.
+For example, <code class="code highlight h i g l t java docutils literal highlight-java"><span class="n">Component</span><span class="p">.</span><span class="na">translatable</span><span class="p">(</span><span class="s">&quot;block.minecraft.diamond_block&quot;</span><span class="p">)</span></code> will render as “Block of Diamond” (or translated to another language) when viewed by the client.
+Some translation keys have arguments which are inserted into the translated content.
+For example, <code class="code highlight h i g l t java docutils literal highlight-java"><span class="n">Component</span><span class="p">.</span><span class="na">translatable</span><span class="p">(</span><span class="s">&quot;block.minecraft.player_head.named&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Component</span><span class="p">.</span><span class="na">text</span><span class="p">(</span><span class="s">&quot;Mark&quot;</span><span class="p">))</span></code> will render as “Mark’s Head”.
+Translatable components can have styling, hover/click events and children components just like any other component type.</p>
+<section id="resource-pack-language-files">
+<h3>Resource pack language files<a class="headerlink" href="#resource-pack-language-files" title="Link to this heading">¶</a></h3>
+<p>You can provide translation files in a resource pack in order to change existing translations or add new ones.
+For a guide on how to do that, see the <a class="reference external" href="https://minecraft.wiki/w/Resource_pack#Language">Minecraft Wiki</a>.</p>
+</section>
+</section>
+<section id="using-adventure-s-localization">
+<h2>Using Adventure’s localization<a class="headerlink" href="#using-adventure-s-localization" title="Link to this heading">¶</a></h2>
+<p>Adventure also provides a way to handle localization in Adventure itself.
+This can be useful in environments where you do not have access to resource packs, or wish to do translations yourself, without relying on Minecraft’s translation system.</p>
+<p>Any component that is sent to a client is ran through the <code class="docutils literal notranslate"><span class="pre">GlobalTranslator</span></code> using the locale of the client.
+This means that if you wish to have automatic translation of components using your own translation data, you can add a <code class="docutils literal notranslate"><span class="pre">Translator</span></code> to the <code class="docutils literal notranslate"><span class="pre">GlobalTranslator</span></code>.
+You can either provide your own implementation of <code class="docutils literal notranslate"><span class="pre">Translator</span></code> or use one of the implementations that Adventure provides.</p>
+<p>Once you have a <code class="docutils literal notranslate"><span class="pre">Translator</span></code> instance, you can register it to the <code class="docutils literal notranslate"><span class="pre">GlobalTranslator</span></code> using <code class="code highlight h i g l t java docutils literal highlight-java"><span class="n">GlobalTranslator</span><span class="p">.</span><span class="na">translator</span><span class="p">().</span><span class="na">addSource</span><span class="p">(</span><span class="n">myTranslator</span><span class="p">)</span></code>.
+This will then make it available for automatic translation across the platform.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some implementations may not use the <code class="docutils literal notranslate"><span class="pre">GlobalTranslator</span></code> in every area, or at all.
+For example, Paper does not use it for items, and Minestom does not use it unless specifically enabled.
+Please consult the documentation for your platform for any limitations.</p>
+</div>
+<section id="using-a-custom-translator">
+<h3>Using a custom <code class="docutils literal notranslate"><span class="pre">Translator</span></code><a class="headerlink" href="#using-a-custom-translator" title="Link to this heading">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">Translator</span></code> is a simple interface that provides two ways of translating content.</p>
+<p>The first <code class="docutils literal notranslate"><span class="pre">translate</span></code> method provides the translation key and locale as an argument and expects a nullable <code class="docutils literal notranslate"><span class="pre">MessageFormat</span></code> in return.
+This system is comparable to Minecraft’s built-in localization system, using the standard Java <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/text/MessageFormat.html">message format</a> for arguments.</p>
+<p>If the first <code class="docutils literal notranslate"><span class="pre">translate</span></code> method returns <code class="docutils literal notranslate"><span class="pre">null</span></code>, the second method which provides the translatable component and locale as an argument can be used.
+This method allows for much richer customization of the translation process as you can return an entire component.
+This means you can, for example, customize the color and styling of the translated component, rather than relying solely on strings for the message format system.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are overriding the component <code class="docutils literal notranslate"><span class="pre">translate</span></code> method, you should be careful not to unintentionally lose the children of the translatable component.
+See the Javadocs for the translate method for a code example of how to avoid this common error.</p>
+</div>
+<p>Below is an example of how one might implement a custom <code class="docutils literal notranslate"><span class="pre">Translator</span></code>.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyTranslator</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Translator</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="nd">@Override</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nd">@NotNull</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="nf">name</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Every translator has a name which is used to identify this specific translator instance.</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Key</span><span class="p">.</span><span class="na">key</span><span class="p">(</span><span class="s">&quot;mynamespace:mykey&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nd">@Override</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nd">@Nullable</span><span class="w"> </span><span class="n">MessageFormat</span><span class="w"> </span><span class="nf">translate</span><span class="p">(</span><span class="kd">final</span><span class="w"> </span><span class="nd">@NotNull</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="nd">@NotNull</span><span class="w"> </span><span class="n">Locale</span><span class="w"> </span><span class="n">locale</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// You could retrieve a string from a properties file, a config file, or some other system.</span>
+<span class="w">    </span><span class="c1">// An an example, we will hard-code a check for a specific key here.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;mytranslation.key&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">locale</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Locale</span><span class="p">.</span><span class="na">US</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MessageFormat</span><span class="p">(</span><span class="s">&quot;Hello %s!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">locale</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// If you only want to use component translation, you can override this method and always return `null`.</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nd">@Override</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nd">@Nullable</span><span class="w"> </span><span class="n">Component</span><span class="w"> </span><span class="nf">translate</span><span class="p">(</span><span class="nd">@NotNull</span><span class="w"> </span><span class="n">TranslatableComponent</span><span class="w"> </span><span class="n">component</span><span class="p">,</span><span class="w"> </span><span class="nd">@NotNull</span><span class="w"> </span><span class="n">Locale</span><span class="w"> </span><span class="n">locale</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// As above, we will hardcode a check here, but you should be reading this from elsewhere.</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;mytranslation.colorful&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">locale</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Locale</span><span class="p">.</span><span class="na">US</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">Component</span><span class="p">.</span><span class="na">text</span><span class="p">(</span><span class="s">&quot;Hello, &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">NamedTextColor</span><span class="p">.</span><span class="na">GREEN</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">component</span><span class="p">.</span><span class="na">arguments</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">color</span><span class="p">(</span><span class="n">NamedTextColor</span><span class="p">.</span><span class="na">RED</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">component</span><span class="p">.</span><span class="na">children</span><span class="p">());</span><span class="w"> </span><span class="c1">// Always make sure to copy the children over!</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="using-a-translationstore">
+<h3>Using a <code class="docutils literal notranslate"><span class="pre">TranslationStore</span></code><a class="headerlink" href="#using-a-translationstore" title="Link to this heading">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">TranslationStore</span></code> is a store of translations.
+It provides a simpler way creating a <code class="docutils literal notranslate"><span class="pre">Translator</span></code> without having to implement the logic for determining and storing translations yourself.
+You can create a translation store and then add or remove translations at will, even after registering it to the global translator.</p>
+<p>Adventure provides two translation stores, one for message format translating and one for component translating.
+An example of how to use a translation store is below.</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// As above, every translator needs an identifying name!</span>
+<span class="c1">// Could also use TranslationStore#component(Key) to work with components instead.</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">TranslationStore</span><span class="w"> </span><span class="n">myStore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TranslationStore</span><span class="p">.</span><span class="na">messageFormat</span><span class="p">(</span><span class="n">Key</span><span class="p">.</span><span class="na">key</span><span class="p">(</span><span class="s">&quot;mynamespace:mykey&quot;</span><span class="p">));</span>
+
+<span class="c1">// You can add translations one-by-one, or in bulk. Consult the Javadocs for a full list of methods.</span>
+<span class="n">myStore</span><span class="p">.</span><span class="na">register</span><span class="p">(</span><span class="s">&quot;mytranslation.key&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Locale</span><span class="p">.</span><span class="na">US</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MessageFormat</span><span class="p">(</span><span class="s">&quot;Hello %s!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Locale</span><span class="p">.</span><span class="na">US</span><span class="p">));</span>
+
+<span class="c1">// You can then register this to the global translator so the translations are available there!</span>
+<span class="n">GlobalTranslator</span><span class="p">.</span><span class="na">translator</span><span class="p">().</span><span class="na">addSource</span><span class="p">(</span><span class="n">myStore</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>There are additional methods on the message format translation store to bulk register from <a class="reference external" href="https://docs.oracle.com/javase/8/docs/api/java/util/ResourceBundle.html">resource bundles</a>.
+You may also want to use Adventure’s <code class="docutils literal notranslate"><span class="pre">UTF8ResourceBundleControl</span></code> utility class to create your bundle.</p>
+</section>
+<section id="using-minimessage-for-translations">
+<h3>Using MiniMessage for translations<a class="headerlink" href="#using-minimessage-for-translations" title="Link to this heading">¶</a></h3>
+<p>Adventure also provides a translator that can use MiniMessage strings, with automatic support for placeholders and arguments.
+For more information, see <a class="reference internal" href="minimessage/translator.html#minimessage-translator"><span class="std std-ref">MiniMessage Translator</span></a>.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="platform/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Platforms</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="resource-pack.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Resource Packs</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2020-2025 KyoriPowered. Not official Minecraft software. Not approved by or associated with Mojang or Microsoft.
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Localization</a><ul>
+<li><a class="reference internal" href="#using-minecraft-s-localization">Using Minecraft’s localization</a><ul>
+<li><a class="reference internal" href="#resource-pack-language-files">Resource pack language files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-adventure-s-localization">Using Adventure’s localization</a><ul>
+<li><a class="reference internal" href="#using-a-custom-translator">Using a custom <code class="docutils literal notranslate"><span class="pre">Translator</span></code></a></li>
+<li><a class="reference internal" href="#using-a-translationstore">Using a <code class="docutils literal notranslate"><span class="pre">TranslationStore</span></code></a></li>
+<li><a class="reference internal" href="#using-minimessage-for-translations">Using MiniMessage for translations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=de8f7116"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>
